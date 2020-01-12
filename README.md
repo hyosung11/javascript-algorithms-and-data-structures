@@ -37,3 +37,13 @@ The  Problem with Time
 
 ### Logarithms
 - a logarithm is the inverse of exponentiation
+- log2(8) = 3 --> 2^3 = 8
+- log2(value) = exponent --> 2exponent = value
+- the binary logarithm of a number roughly measures the number of times you can divide that number by 2 before you get a value that's less than or equal to one.
+- O(log n) logarithmic complexity
+
+- certain searching algorithms have logarithmic time complexity
+- efficient sorting algorithms involve logarithms
+- recursion sometimes involves logarithmic space complexity
+
+![Big O](/images/big-o.png)
