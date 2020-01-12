@@ -55,7 +55,7 @@ The  Problem with Time
 - explain why adding elements to the beginning of an array is costly
 - compare and contrast the runtime for arrays and objects, as well as built-in methods
 
-### The Big O of Objects
+### The Big O of Objects https://cs.slides.com/colt_steele/built-in-data-structures-25#/
 - Objects are unordered data structures where everything is stored in unordered, key value pairs
 - Use objects:
   - when you don't need order
@@ -75,7 +75,7 @@ The  Problem with Time
 - Use arrays:
   - when you need order
   - when you need fast access/insertion and removal (sort of ...)
-  - not as efficient when you have to reindex the array 
+  - not as efficient when you have to reindex the array
 - Big O of Arrays
   - Insertion - it depends ... push()/pop() vs shift()/unshift()
   - Removal - it depends ...
@@ -91,3 +91,24 @@ The  Problem with Time
   - splice - O(n)
   - sort - O(n * log n)
   - forEach/map/filter/reduce/etc. - O(n)
+
+## Section 4: Problem Solving Approach https://cs.slides.com/colt_steele/problem-solving-patterns#/
+
+### Introduction to Problem Solving
+- an algorithm is a process or set of steps to accomplish a certain task.
+- How do you improve?
+  1. Devise a plan for solving problems.
+  2. Master common problem solving patterns.
+- Problem Solving
+  - understand the problem
+  - explore concrete examples
+  - break it down
+  - solve/simplify
+  - look back and refactor
+
+### Step 1: Understand the Problem https://en.wikipedia.org/wiki/How_to_Solve_It
+1. Can I restate the problem in my own words?
+2. What are the inputs that go into the problem?
+3. What are the outputs that should come from the solution to the problem?
+4. Can the outputs be determined from the inputs? (Do I have enough information?)
+5. How should I label the important pieces of data that are a part of the problem?
