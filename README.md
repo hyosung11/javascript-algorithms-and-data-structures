@@ -70,3 +70,24 @@ The  Problem with Time
   - Object.values O(n)
   - Object.entries O(n)
   - hasOwnProperty O(1)
+
+### The Big O of Arrays
+- Use arrays:
+  - when you need order
+  - when you need fast access/insertion and removal (sort of ...)
+  - not as efficient when you have to reindex the array 
+- Big O of Arrays
+  - Insertion - it depends ... push()/pop() vs shift()/unshift()
+  - Removal - it depends ...
+  - Searching - O(n)
+  - Access - O(1)
+- Big O of Array Methods
+  - push - O(1)
+  - pop - O(1)
+  - shift - O(n)
+  - unshift - O(n)
+  - concat - O(n)
+  - slice - O(n)
+  - splice - O(n)
+  - sort - O(n * log n)
+  - forEach/map/filter/reduce/etc. - O(n)
