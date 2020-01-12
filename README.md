@@ -12,5 +12,9 @@ Code and Notes from the JavaScript Algorithms and Data Structures Masterclass
 - Big O Slides https://cs.slides.com/colt_steele/big-o-notation#/
 
 ### Timing Our Code
+The  Problem with Time
+- different machines will record different times
+- the same machine will record different times!
+- for fast algorithms, speed measurements may not be precise enough?
 
 ### Counting Operations
