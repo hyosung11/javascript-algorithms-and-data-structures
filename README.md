@@ -47,3 +47,26 @@ The  Problem with Time
 - recursion sometimes involves logarithmic space complexity
 
 ![Big O](/images/big-o.png)
+
+## Section 3: Analyzing Performance of Arrays and Objects
+
+### Objectives
+- understand how objects and arrays work through the lens of Big O
+- explain why adding elements to the beginning of an array is costly
+- compare and contrast the runtime for arrays and objects, as well as built-in methods
+
+### The Big O of Objects
+- Objects are unordered data structures where everything is stored in unordered, key value pairs
+- Use objects:
+  - when you don't need order
+  - when you need fast access/insertion and removal
+- Big O of Objects
+  - Insertion O(1)
+  - Removal O(1)
+  - Searching O(1)
+  - Access O(1)
+- Big O of Object Methods
+  - Object.keys O(n)
+  - Object.values O(n)
+  - Object.entries O(n)
+  - hasOwnProperty O(1)
