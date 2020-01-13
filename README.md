@@ -130,4 +130,8 @@ The  Problem with Time
   - catch any lingering conceptual issues or misunderstandings
   - pseudocode your steps
 
-### Step 4: Solve or Simplify 
+### Step 4: Solve or Simplify
+- find the core difficulty in what you're trying to do
+- temporarily ignore that difficulty
+- write a simplified solution
+- then incorporate that difficulty back in
