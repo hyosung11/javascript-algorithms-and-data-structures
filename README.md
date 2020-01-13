@@ -112,3 +112,22 @@ The  Problem with Time
 3. What are the outputs that should come from the solution to the problem?
 4. Can the outputs be determined from the inputs? (Do I have enough information?)
 5. How should I label the important pieces of data that are a part of the problem?
+
+### Step 2: Concrete Examples
+- Coming up with examples can help you understand the problem better.
+- Examples also provide sanity checks that your eventual solution works how it should.
+- e.g., user stories, unit tests
+
+#### Explore Examples
+- start with simple examples
+- progress to more complex examples
+- explore examples with empty inputs
+- explore examples with invalid inputs
+
+### Step 3: Break It Down
+- explicitly write out the steps you need to take
+  - forces you to think about the code
+  - catch any lingering conceptual issues or misunderstandings
+  - pseudocode your steps
+
+### Step 4: Solve or Simplify 
