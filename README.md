@@ -149,4 +149,21 @@ The  Problem with Time
 - Can you think of other ways to refactor?
 - How have other people solved this problem?
 
-## Section 5: Problem Solving Patterns 
+## Section 5: Problem Solving Patterns
+
+### Intro to Problem Solving Patterns
+- https://cs.slides.com/colt_steele/problem-solving-patterns#/
+
+How do you improve?
+1. Devise a plan for solving problems
+2. Master common problem solving patterns
+
+Some Patterns
+- frequency counter
+- multiple pointers
+- sliding window
+- divide and conquer
+- dynamic programming
+- greedy algorithms
+- backtracking
+- many more!
