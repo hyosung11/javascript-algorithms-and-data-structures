@@ -34,12 +34,27 @@ function charCount(str) {
       result[char] = 1;
     };
   }
-
-
     // if char is something else (space, punctuation, etc.) don't do anything
   // return object at end
   return result;
 }
 
-console.log(charCount('hello'));
-console.log(charCount('Hi there!'));
+// console.log(charCount('hello'));
+// console.log(charCount('Hi there!'));
+
+function charCount2(str) {
+  let obj = {};
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i].toLowerCase();
+    if (/[a-z0-9]/.test(char)) {
+      if (obj[char] > 0) {
+        obj[char]++;
+      } else {
+        obj[char] = 1;1
+      };
+    }
+  }
+  return obj;
+}
+
+console.table(charCount2('cheez it now'));
