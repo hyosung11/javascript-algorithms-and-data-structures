@@ -148,3 +148,5 @@ The  Problem with Time
 - Can you improve the performance of your solution?
 - Can you think of other ways to refactor?
 - How have other people solved this problem?
+
+## Section 5: Problem Solving Patterns 

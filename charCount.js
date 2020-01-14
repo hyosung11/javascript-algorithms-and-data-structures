@@ -19,6 +19,7 @@
 //   // return an object with keys that are lowecase alphanumeric characters in the string; values should be the counts of each character in the string
 // }
 
+// ONE
 function charCount(str) {
   // make object to return at end
   let result = {};
@@ -42,6 +43,7 @@ function charCount(str) {
 // console.log(charCount('hello'));
 // console.log(charCount('Hi there!'));
 
+// TWO
 function charCount2(str) {
   let obj = {};
   for (let i = 0; i < str.length; i++) {
@@ -50,11 +52,69 @@ function charCount2(str) {
       if (obj[char] > 0) {
         obj[char]++;
       } else {
-        obj[char] = 1;1
+        obj[char] = 1;
       };
     }
   }
   return obj;
 }
 
-console.table(charCount2('cheez it now'));
+// console.table(charCount2('cheez it now'));
+
+// THREE
+function charCount3(str) {
+  const obj = {};
+  for (let char of str) {
+    char = char.toLowerCase();
+    if (/[a-z0-9]/.test(char)) {
+      if (obj[char] > 0) {
+        obj[char]++;
+      } else {
+        obj[char] = 1;
+      };
+    }
+  }
+  return obj;
+}
+
+// console.table(charCount3('kiss me Sohee'));
+
+// FOUR with RegExp
+function charCount4(str) {
+  const obj = {};
+  for (let char of str) {
+    char = char.toLowerCase();
+    if (/[a-z0-9]/.test(char)) {
+      obj[char] = ++obj[char] || 1;
+    }
+  }
+  return obj;
+}
+
+// console.table(charCount4('kiss me Sohee'));
+
+// FIVE with isAlphaNumeric function
+function charCount5(str) {
+  const obj = {};
+  for (let char of str) {
+    if (isAlphaNumeric(char)) {
+      char = char.toLowerCase();
+      obj[char] = ++obj[char] || 1;
+    }
+  }
+  return obj;
+}
+
+function isAlphaNumeric(char) {
+  let code = char.charCodeAt(0);
+  if (!(code > 47 && code < 58) && // numeric (0-9)
+      !(code > 64 && code < 91) && // upper alpha (A-Z)
+      !(code > 96 && code < 123)) { // lower alpha (a-z)
+    return false;
+  }
+  return true;
+}
+
+// charCodeAt(0);
+
+console.table(charCount5('kiss me Sohee'));
