@@ -154,11 +154,11 @@ The  Problem with Time
 ### Intro to Problem Solving Patterns
 - https://cs.slides.com/colt_steele/problem-solving-patterns#/
 
-How do you improve?
+#### How do you improve?
 1. Devise a plan for solving problems
 2. Master common problem solving patterns
 
-Some Patterns
+#### Some Patterns
 - frequency counter
 - multiple pointers
 - sliding window
@@ -167,3 +167,7 @@ Some Patterns
 - greedy algorithms
 - backtracking
 - many more!
+
+### Frequency Counter Pattern
+- This pattern uses objects or sets to collect values/frequencies of values.
+- This can often avoid the need for nested loops or O(n^2) operations with arrays/strings.
