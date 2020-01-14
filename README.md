@@ -135,3 +135,5 @@ The  Problem with Time
 - temporarily ignore that difficulty
 - write a simplified solution
 - then incorporate that difficulty back in
+
+### Step 5: Look Back and Refactor 
