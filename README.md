@@ -9,7 +9,7 @@ Code and Notes from the JavaScript Algorithms and Data Structures Masterclass by
 ## Section 2: Big O Notation
 
 ### Intro to Big O
-- Big O Slides https://cs.slides.com/colt_steele/big-o-notation#/
+- [Big O Slides](https://cs.slides.com/colt_steele/big-o-notation#/)
 
 ### Timing Our Code
 The  Problem with Time
@@ -23,7 +23,7 @@ The  Problem with Time
 - but regardless of the exact number, the number of operations grows roughly proportionally with n
 
 ### Visualizing Time Complexities
-- Performance Tracker https://rithmschool.github.io/function-timer-demo/
+- [Performance Tracker](https://rithmschool.github.io/function-timer-demo/)
 
 ### Official Intro to Big O & Simplifying Big O Expressions
 - O(1) constant time
@@ -55,7 +55,7 @@ The  Problem with Time
 - explain why adding elements to the beginning of an array is costly
 - compare and contrast the runtime for arrays and objects, as well as built-in methods
 
-### The Big O of Objects https://cs.slides.com/colt_steele/built-in-data-structures-25#/
+### [The Big O of Objects](https://cs.slides.com/colt_steele/built-in-data-structures-25#/)
 - Objects are unordered data structures where everything is stored in unordered, key value pairs
 - Use objects:
   - when you don't need order
