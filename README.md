@@ -1,5 +1,5 @@
 # JavaScript Algorithms and Data Structures Masterclass
-Code and Notes from the JavaScript Algorithms and Data Structures Masterclass by Colt Steele
+## Code and Notes from the JavaScript Algorithms and Data Structures Masterclass by Colt Steele
 
 ## Section 1: Introduction
 1. Curriculum Walkthrough
@@ -92,7 +92,7 @@ The  Problem with Time
   - sort - O(n * log n)
   - forEach/map/filter/reduce/etc. - O(n)
 
-## Section 4: Problem Solving Approach https://cs.slides.com/colt_steele/problem-solving-patterns#/
+## Section 4: [Problem Solving Approach](https://cs.slides.com/colt_steele/problem-solving-patterns#/)
 
 ### Introduction to Problem Solving
 - an algorithm is a process or set of steps to accomplish a certain task.
@@ -106,7 +106,7 @@ The  Problem with Time
   - solve/simplify
   - look back and refactor
 
-### Step 1: Understand the Problem https://en.wikipedia.org/wiki/How_to_Solve_It
+### Step 1: [Understand the Problem](https://en.wikipedia.org/wiki/How_to_Solve_It)
 1. Can I restate the problem in my own words?
 2. What are the inputs that go into the problem?
 3. What are the outputs that should come from the solution to the problem?
@@ -152,7 +152,7 @@ The  Problem with Time
 ## Section 5: Problem Solving Patterns
 
 ### Intro to Problem Solving Patterns
-- https://cs.slides.com/colt_steele/problem-solving-patterns#/
+- [slides](https://cs.slides.com/colt_steele/problem-solving-patterns#/)
 
 #### How do you improve?
 1. Devise a plan for solving problems
@@ -171,3 +171,5 @@ The  Problem with Time
 ### Frequency Counter Pattern
 - This pattern uses objects or sets to collect values/frequencies of values.
 - This can often avoid the need for nested loops or O(n^2) operations with arrays/strings.
+
+### Frequency Counter: Anagram Challenge
