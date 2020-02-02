@@ -205,3 +205,7 @@ The  Problem with Time
 - Frequency Counter
   - sameFrequency
   - areThereDuplicates
+
+- Multiple Pointers
+  - averagePair
+  - isSubsequence
