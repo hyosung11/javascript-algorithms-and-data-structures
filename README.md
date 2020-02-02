@@ -1,7 +1,9 @@
 # JavaScript Algorithms and Data Structures Masterclass
+
 ## Code and Notes from the JavaScript Algorithms and Data Structures Masterclass by Colt Steele
 
 ## Section 1: Introduction
+
 1. Curriculum Walkthrough
 2. What order should you watch in?
 3. How I'm running my code
@@ -9,9 +11,11 @@
 ## Section 2: Big O Notation
 
 ### Intro to Big O
+
 - [Big O Slides](https://cs.slides.com/colt_steele/big-o-notation#/)
 
 ### Timing Our Code
+
 The  Problem with Time
 - different machines will record different times
 - the same machine will record different times!
@@ -23,6 +27,7 @@ The  Problem with Time
 - but regardless of the exact number, the number of operations grows roughly proportionally with n
 
 ### Visualizing Time Complexities
+
 - [Performance Tracker](https://rithmschool.github.io/function-timer-demo/)
 
 ### Official Intro to Big O & Simplifying Big O Expressions
@@ -152,13 +157,16 @@ The  Problem with Time
 ## Section 5: Problem Solving Patterns
 
 ### Intro to Problem Solving Patterns
-- [slides](https://cs.slides.com/colt_steele/problem-solving-patterns#/)
+
+- [Problem Solving Patterns Slides](https://cs.slides.com/colt_steele/problem-solving-patterns#/)
 
 #### How do you improve?
+
 1. Devise a plan for solving problems
 2. Master common problem solving patterns
 
 #### Some Patterns
+
 - frequency counter
 - multiple pointers
 - sliding window
@@ -169,9 +177,11 @@ The  Problem with Time
 - many more!
 
 ### Frequency Counter Pattern
+
 - This pattern uses objects or sets to collect values/frequencies of values.
 - This can often avoid the need for nested loops or O(n^2) operations with arrays/strings.
 
 ### Multiple Pointers Pattern
+
 - Time Complexity - O(n)
 - Space Complexity - O(1)
