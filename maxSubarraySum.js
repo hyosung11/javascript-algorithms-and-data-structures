@@ -10,7 +10,7 @@
 
 // 1. Max Sum Naive Version
 
-function maxSubarraySum(array, number) {
+function maxSubarraySumNaive(array, number) {
     // check if length of array is less than the number
     if (number > array.length) {
         return null;
@@ -24,9 +24,30 @@ function maxSubarraySum(array, number) {
         if (temp > max) {
             max = temp;
         }
-        console.log(temp, max);
+        // console.log(temp, max);
     }
     return max;
 }
 
-console.log(maxSubarraySum([4, 2, 1, 6, 2], 4));
+// console.log(maxSubarraySumNaive([4, 2, 1, 6, 2], 4));
+
+
+// 2. Max Sum Refactored Solution with Sliding Windows
+
+function maxSubarraySumSWP(array, number) {
+    let maxSum = 0;
+    let tempSum = 0;
+    if (array.length < number) return null;
+    for (let i = 0; i < number; i++) {
+        maxSum += array[i];
+    }
+    // console.log(maxSum);
+    tempSum = maxSum;
+    for (let i = number; i < array.length; i++) {
+        tempSum = tempSum - array[i - number] + array[i];
+        maxSum = Math.max(maxSum, tempSum);
+    }
+    return maxSum;
+}
+
+console.log(maxSubarraySumSWP([4, 2, 1, 2, 2, 5, 11, ], 2))
