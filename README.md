@@ -199,4 +199,9 @@ The  Problem with Time
 
 - This pattern involves dividing a data set into smaller chunks and then repeating a process with a subset of data.
 - This pattern can tremendously decrease time complexity.
-- 
+
+## Section 6: Optional Coding Challenges
+
+- Frequency Counter
+  - sameFrequency
+  - areThereDuplicates
