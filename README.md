@@ -231,3 +231,8 @@
 - Multiple Pointers
   - averagePair
   - isSubsequence
+
+- Sliding Window
+  - maxSubarraySum
+  - minSubarrayLen
+  - findLongestSubstring
