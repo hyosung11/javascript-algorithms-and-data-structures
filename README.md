@@ -236,3 +236,17 @@
   - maxSubarraySum
   - minSubarrayLen
   - findLongestSubstring
+
+## Section 7: Recursion
+
+### Story Time: Martin & The Dragon
+
+### Why Use Recursion
+
+- Recursion refers to a process (e.g., a function) that calls itself
+- Examples Everywhere
+  - JSON.parse / JSON.stringify
+  - document.getElementById and DOM traversal algorithms
+  - Object traversal
+  - Very common with more complex algorithms
+  - It's sometimes a cleaner alternative to iteration
