@@ -1,3 +1,10 @@
+// only whitespace and comments are allowed
+// before the use-strict pragma
+
+"use strict";
+
+// everything in this file runs in strict mode
+
 function addUpTo(n) {
   return n * (n + 1) / 2;
 }
