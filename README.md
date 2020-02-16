@@ -241,6 +241,8 @@
 
 ### Story Time: Martin & The Dragon
 
+- [Recursion Slides]()
+
 ### Why Use Recursion
 
 - Recursion refers to a process (e.g., a function) that calls itself
@@ -265,3 +267,15 @@
 - Two essential parts of a recursive function
   - Base Case
   - Different Input
+
+- Issues
+  - No base case
+  - Forgetting to return something or returning the wrong thing!
+  - Stack overflow!
+
+- Helper Method Recursion
+
+- Pure Recursion
+  - For arrays, use methods like slice, the spread operator, and concat that make copies of arrays so you do not mutate them.
+  - Remember that strings are immutable so you will need to use methods like slice, substr, or substring to make copies of strings.
+  - To make copies of objects use Object.assign, or the spread operator.
