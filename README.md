@@ -1,5 +1,8 @@
 # JavaScript Algorithms and Data Structures Masterclass
 
+[JavaScript Algorithms and Data Structures Masterclass
+The Missing Computer Science and Coding Interview Bootcamp](https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/)
+
 Code and Notes from the JavaScript Algorithms and Data Structures Masterclass by Colt Steele
 
 ## 1: Introduction
@@ -30,19 +33,44 @@ Code and Notes from the JavaScript Algorithms and Data Structures Masterclass by
 - When your code slows down or crashes, identifying parts of the code that are inefficient can help us find pain points in our applications.
 - Less important: ti comes up in interviews!
 
-
-
 ### 2.2 Timing Our Code
 
+- An Example
 
+```js
+// add-up-to-slower
+function addUpTo(n) {
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
 
-#### The Problem with Time
+  return total;
+}
 
-- different machines will record different times
-- the same machine will record different times!
-- for fast algorithms, speed measurements may not be precise enough?
+// Timer
+let t1 = performance.now();
+addUpTo(1000000000);
+var t2 = performance.now();
+console.log(`Time Elapsed: ${(t2 - t1) / 1000} seconds.`)
 
-### Counting Operations
+// add-up-to-faster
+function addUpTo(n) {
+  return n * (n + 1) / 2;
+}
+```
+
+- What does better mean?
+  - faster?
+  - less memory-intensive?
+  - more readable?
+
+- The Problem with Time
+  - Different machines will record different times
+  - The same machine will record different times!
+  - For fast algorithms, speed measurements may not be precise enough.
+
+### 2.3 Counting Operations
 
 - rather than counting seconds which are so variable, let's count the number of simple operations the computer has to perform.
 - depending on what we count, the number of operations can be as low as 2n or as high as 5n + 2
