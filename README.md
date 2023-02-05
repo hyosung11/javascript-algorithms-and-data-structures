@@ -1,20 +1,40 @@
 # JavaScript Algorithms and Data Structures Masterclass
 
-## Code and Notes from the JavaScript Algorithms and Data Structures Masterclass by Colt Steele
+Code and Notes from the JavaScript Algorithms and Data Structures Masterclass by Colt Steele
 
-## Section 1: Introduction
+## 1: Introduction
 
 1. Curriculum Walkthrough
 2. What order should you watch in?
 3. How I'm running my code
 
-## Section 2: Big O Notation
+## 2: Big O Notation
 
-### Intro to Big O
+### 2.1 Intro to Big O
 
-- [Big O Slides](https://cs.slides.com/colt_steele/big-o-notation#/)
+[Big O Slides](https://cs.slides.com/colt_steele/big-o-notation#/)
 
-### Timing Our Code
+#### 2.1.1 Objectives
+
+- Motivate the need for something like Big O Notation
+- Describe what Big O Notation is
+- Simplify Big O Expressions
+- Define "time complexity" and "space complexity"
+- Evaluate the time complexity and space complexity of different algorithms using Big O Notation
+- Describe what a logarithm is
+
+#### 2.1.2 Who Cares?
+
+- It's important to have a precise vocabulary to talk about how our code performs.
+- Useful for discussing trade-offs between different approaches.
+- When your code slows down or crashes, identifying parts of the code that are inefficient can help us find pain points in our applications.
+- Less important: ti comes up in interviews!
+
+
+
+### 2.2 Timing Our Code
+
+
 
 #### The Problem with Time
 
