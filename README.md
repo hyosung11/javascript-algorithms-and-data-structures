@@ -5,13 +5,13 @@ The Missing Computer Science and Coding Interview Bootcamp](https://www.udemy.co
 
 Code and Notes from the JavaScript Algorithms and Data Structures Masterclass by Colt Steele
 
-## 1: Introduction
+## Section 1: Introduction
 
 1. Curriculum Walkthrough
 2. What order should you watch in?
 3. How I'm running my code
 
-## 2: Big O Notation
+## Section 2: Big O Notation
 
 ### 2.1 Intro to Big O
 
@@ -75,18 +75,64 @@ function addUpTo(n) {
 - rather than counting seconds which are so variable, let's count the number of simple operations the computer has to perform.
 - depending on what we count, the number of operations can be as low as 2n or as high as 5n + 2
 - but regardless of the exact number, the number of operations grows roughly proportionally with n
+- If n doubles, the number of operations will also roughly double.
 
-### Visualizing Time Complexities
+### 2.4 Visualizing Time Complexities
 
 - [Performance Tracker](https://rithmschool.github.io/function-timer-demo/)
 
-### Official Intro to Big O & Simplifying Big O Expressions
+### 2.5 Official Intro to Big O
+
+Big O Notation is a way to formalize fuzzy counting. It allows us to talk formally about how the runtime of an algorithm grows as the input grows. We won't care about the details, only the trends.
+
+We say that an algorithm is O(f(n)) if the number of simple operations the computer has to do is eventually less than a constant times f(n), as n increases.
+
+- f(n) could be linear (f(n) = n)
+- f(n) could be quadratic (f(n) = n^2)
+- f(n) could be constant (f(n) = 1)
+- f(n) could be something entirely different
+
+### 2.6 Simplifying Big O Expressions
+
+- Constants Don't Matter
+  - ~~O(2n)~~ => O(n)
+  - ~~O(500)~~ => O(1)
+  - ~~O(13n^2)~~ => O(n^2)
+
+- Smaller Terms Don't Matter
+  - O(n + 10) => O(n)
+  - O(1000n + 50) => O(n)
+  - O(n^2 + 5n + 8) => O(n^2)
+
+- Big O Shorthands
+  - Arithmetic operations are constant
+  - Variable assignment is constant
+  - Accessing elements in an array (by index) or object (by key) is constant
+  - In a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop
+
+- A Couple Code Examples
+
+```js
+// O(n)
+function logAtLeast(n) {
+  for (let i = 1; i <= Math.max(5, n); i++) {
+    console.log(i)
+  }
+}
+
+// O(1)
+function lotAtMost(n) {
+  for (let i = 1; i <= Math.min(5, n); i++) {
+    console.log(i);
+  }
+}
+```
 
 - O(1) constant time
 - O(n) linear time
 - O(n^2) quadratic time
 
-### Space Complexity
+### 2.7 Space Complexity - RRRR
 
 - most primitives (booleans, numbers, undefined, null) are constant space
 - strings require O(n) space (where n is the string length)
