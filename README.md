@@ -31,7 +31,7 @@ Code and Notes from the JavaScript Algorithms and Data Structures Masterclass by
 - It's important to have a precise vocabulary to talk about how our code performs.
 - Useful for discussing trade-offs between different approaches.
 - When your code slows down or crashes, identifying parts of the code that are inefficient can help us find pain points in our applications.
-- Less important: ti comes up in interviews!
+- Less important: it comes up in interviews!
 
 ### 2.2 Timing Our Code
 
@@ -121,7 +121,7 @@ function logAtLeast(n) {
 }
 
 // O(1)
-function lotAtMost(n) {
+function logAtMost(n) {
   for (let i = 1; i <= Math.min(5, n); i++) {
     console.log(i);
   }
@@ -131,6 +131,34 @@ function lotAtMost(n) {
 - O(1) constant time
 - O(n) linear time
 - O(n^2) quadratic time
+
+### Quiz
+
+1. What is the time complexity for the following function?
+
+    ```js
+    function logUpTo(n) {
+        for (var i = 1; i <= n; i++) {
+            console.log(i);
+        }
+      }
+    ```
+
+    O(n)
+
+2. What is the time complexity for the following function?
+
+    ```js
+    function logAtMost10(n) {
+        for (var i = 1; i <= Math.min(n, 10); i++) {
+            console.log(i);
+        }
+    }
+    ```
+
+    O(1)
+
+
 
 ### 2.7 Space Complexity - RRRR
 
