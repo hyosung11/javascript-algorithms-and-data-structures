@@ -465,7 +465,7 @@ O(n)
   1. *Devise* a plan for solving problems.
   2. *Master* common problem solving patterns.
 
-- Problem Solving Strategies
+- Problem Solving Strategies (version of PEDAC)
   - Understand the problem
   - Explore concrete examples
   - Break it down
@@ -474,14 +474,15 @@ O(n)
 
 - Note: many of these strategies are adapted from George Polya, whose book *How To Solve It* is a great resource for anyone who wants to become a better problem solver
 
-### Step 1: Understand the Problem - RRRR
+### Step 1: Understand the Problem
 
 [Understand the Problem](https://en.wikipedia.org/wiki/How_to_Solve_It)
 
 1. Can I restate the problem in my own words?
 2. What are the inputs that go into the problem?
 3. What are the outputs that should come from the solution to the problem?
-4. Can the outputs be determined from the inputs? (Do I have enough information?)
+4. Can the outputs be determined from the inputs? In other words, do I have enough information to solve the problem?
+   - You may not be able to answer this question until you set about solving the problem. That's okay; it's still worth considering the question at this early stage.
 5. How should I label the important pieces of data that are a part of the problem?
 
 ### Step 2: Concrete Examples
@@ -490,33 +491,67 @@ O(n)
 - Examples also provide sanity checks that your eventual solution works how it should.
 - e.g., user stories, unit tests
 
-#### Explore Examples
+- Explore Examples
+  - Start with simple examples
+  - Progress to more complex examples
+  - Explore examples with empty inputs
+  - Explore examples with invalid inputs
 
-- start with simple examples
-- progress to more complex examples
-- explore examples with empty inputs
-- explore examples with invalid inputs
+- Problem: Write a function that takes in a string and returns counts of each character in the string
+  - Simple Examples
+    - `charCount('aaaa'); // {a: 4}
+    - `charCount('hello'); // {h: 1, e: 1, l: 2, o: 1}
+  - More Complex Examples
+    - "my phone number is 1823433'
+      - numbers
+      - spaces
+      - non-letters
+    - "Hello hi"
+      - uppercase
+      - lowercase
+  - Examples with Empty Inputs
+    - `charCount("")` // => {} | null | undefined | Error?
+  - Examples with Invalid Inputs
+    - edge cases
 
 ### Step 3: Break It Down
 
-- explicitly write out the steps you need to take
-  - forces you to think about the code
-  - catch any lingering conceptual issues or misunderstandings
-  - pseudocode your steps
+- Explicitly write out the steps you need to take.
+  - This forces you to think about the code you'll write before you write it, and helps you catch any lingering conceptual issues or misunderstandings before you dive in and have to worry about details (e.g. language syntax) as well.
+- E.g., pseudocode your steps
+
+- Problem: Write a function that takes in a string and returns counts of each character in the string.
+
+```js
+function charCount(str) {
+  // make object to return at end
+  // loop over string, for each char
+    // if the char is a number/letter AND is a key in object, add one to count
+    // if the char is a number/letter AND not in object, add it and set value to 1
+    //  if char not a letter/number don't do anything
+  // return object at end
+}
+
+// Test Case
+charCount("Your PIN number is 1234!")
+```
 
 ### Step 4: Solve or Simplify
 
-- find the core difficulty in what you're trying to do
-- temporarily ignore that difficulty
-- write a simplified solution
-- then incorporate that difficulty back in
+- Solve the problem. If you can't solve a simpler problem!
 
-### Step 5: Look Back and Refactor
+- Simplify
+  - Find the core difficulty in what you're trying to do
+  - Temporarily ignore that difficulty
+  - Write a simplified solution
+  - Then incorporate that difficulty back in
+
+### Step 5: Look Back and Refactor - RRRR
 
 - Congrats on solving it, but you're not done!
 - consider efficiency and legibility
 
-#### Refactoring Questions
+### Refactoring Questions
 
 - Can you check the result?
 - Can you derive the result differently?
