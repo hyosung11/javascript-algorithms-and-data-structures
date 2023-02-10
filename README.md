@@ -132,16 +132,16 @@ function logAtMost(n) {
 - O(n) linear time
 - O(n^2) quadratic time
 
-### Quiz
+### Time Complexity Quiz
 
 1. What is the time complexity for the following function?
 
     ```js
     function logUpTo(n) {
-        for (var i = 1; i <= n; i++) {
-            console.log(i);
-        }
+      for (var i = 1; i <= n; i++) {
+        console.log(i);
       }
+    }
     ```
 
     O(n)
@@ -150,43 +150,229 @@ function logAtMost(n) {
 
     ```js
     function logAtMost10(n) {
-        for (var i = 1; i <= Math.min(n, 10); i++) {
-            console.log(i);
-        }
+      for (var i = 1; i <= Math.min(n, 10); i++) {
+        console.log(i);
+      }
     }
     ```
 
     O(1)
 
+3. What is the time complexity for the following function?
 
+    ```js
+    function logAtLeast10(n) {
+      for (var i = 1; i <= Math.max(n, 10); i++) {
+        console.log(i);
+      }
+    }
+    ```
 
-### 2.7 Space Complexity - RRRR
+    O(n)
 
-- most primitives (booleans, numbers, undefined, null) are constant space
-- strings require O(n) space (where n is the string length)
-- reference types are generally O(n) where n is the length (for arrays) or the numbers of keys (for objects)
+4. What is the time complexity for the following function?
 
-### Logarithms
+    ```js
+    function onlyElementsAtEvenIndex(array) {
+      var newArray = Array(Math.ceil(array.length / 2));
+      for (var i = 0; i < array.length; i++) {
+        if (i % 2 === 0) {
+           newArray[i / 2] = array[i];
+        }
+      }
+      return newArray;
+    }
+    ```
 
-- a logarithm is the inverse of exponentiation
-- log2(8) = 3 --> 2^3 = 8
-- log2(value) = exponent --> 2exponent = value
-- the binary logarithm of a number roughly measures the number of times you can divide that number by 2 before you get a value that's less than or equal to one.
-- O(log n) logarithmic complexity
+    O(n)
 
-- certain searching algorithms have logarithmic time complexity
-- efficient sorting algorithms involve logarithms
-- recursion sometimes involves logarithmic space complexity
+5. What is the time complexity for the following function?
+
+    ```js
+    function subtotals(array) {
+      var subtotalArray = Array(array.length);
+      for (var i = 0; i < array.length; i++) {
+        var subtotal = 0;
+        for (var j = 0; j <= i; j++) {
+          subtotal += array[j];
+        }
+        subtotalArray[i] = subtotal;
+      }
+      return subtotalArray;
+    }
+    ```
+
+    O(n^2)
+
+### 2.7 Space Complexity
+
+- We can also use Big O notation to analyze space complexity: how much additional memory do we need to allocate in order to run the code in our algorithm?
+
+- What about the inputs?
+  - Sometimes you'll hear the term **auxiliary space complexity** to refer to space required by the algorithm, not including space taken up by the inputs.
+  - Unless otherwise noted, when we talk about space complexity, technically we'll be talking about auxiliary space complexity.
+
+- Space Complexity in JavaScript Rules of Thumb
+  - Most primitives (booleans, numbers, undefined, null) are constant space
+  - Strings require O(n) space (where n is the string length)
+  - Reference types are generally O(n) where n is the length (for arrays) or the numbers of keys (for objects)
+
+- Example of Space Complexity
+
+  ```js
+  function sum(arr) {
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+      total += arr[i];
+    }
+    return total;
+  }
+  ```
+
+  - Just two variables `total` and `i` representing numbers.
+  - Space complexity is O(1) or constant space because it's always the same no matter the size of the input.
+
+- Another Example
+
+  ```js
+  function double(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+      newArr.push(2 * arr[i]);
+    }
+    return newArr;
+  }
+  ```
+
+  - O(n) space
+
+### Big O Space Complexity Quiz
+
+Question 1: Determine the space complexity for the following function.
+
+```js
+function logUpTo(n) {
+  for (var i = 1; i <= n; i++) {
+    console.log(i);
+  }
+}
+```
+
+O(1) Constant Space
+
+Question 2: Determine the space complexity for the following function.
+
+```js
+function logAtMost10(n) {
+  for (var i = 1; i <= Math.min(n, 10); i++) {
+    console.log(i);
+  }
+}
+```
+
+O(1) Constant Space
+
+Question 3: Determine the space complexity for the following function:
+
+```js
+function logAtMost10(n) {
+  for (var i = 1; i <= Math.min(n, 10); i++) {
+    console.log(i);
+  }
+}
+```
+
+O(1) Constant Space
+
+Question 4: Determine the space complexity for the following function:
+
+```js
+function onlyElementsAtEvenIndex(array) {
+  var newArray = Array(Math.ceil(array.length / 2));
+  for (var i = 0; i < array.length; i++) {
+    if (i % 2 === 0) {
+      newArray[i / 2] = array[i];
+    }
+  }
+  return newArray;
+}
+```
+
+O(n) Linear Space
+
+Question 5: Determine the space complexity for the following function:
+
+```js
+function subtotals(array) {
+  var subtotalArray = Array(array.length);
+  for (var i = 0; i < array.length; i++) {
+    var subtotal = 0;
+    for (var j = 0; j <= i; j++) {
+      subtotal += array[j];
+    }
+    subtotalArray[i] = subtotal;
+  }
+  return subtotalArray;
+}
+```
+
+O(n)
+
+### 2.8 Logarithms
+
+- We've encountered some of the most common complexities; O(1), O(n), O(n^2).
+- Sometimes Big O expressions involve more complex mathematical expressions.
+- One that appears more often than you might like is the algorithm
+
+- What's a logarithm again?
+  - A logarithm is the inverse of exponentiation
+  - log2(8) = 3 --> 2^3 = 8
+    - log base 2 of 8 equals 3
+    - i.e., 2 to what power equals 8?
+    - We omit the 2, so log === log2
+  - log2(value) = exponent --> 2exponent = value
+  - can have log3,log5, log10, but the binary algorithm (log2) is the most common
+
+- The binary logarithm of a number roughly measures the number of times you can divide that number by 2 before you get a value that's less than or equal to one.
+
+- Logarithmic Examples
+  - 8 => (8 / 2 = 4) => (4 / 2 = 2) => (2 / 2 = 1) => log(8) = 3
+  - 25 => (25 / 2 = 12.5) => (12.5 / 2 = 6.25) => (6.25 / 2 = 3.125) => (3.125 / 2 = 1.5625) => (1.5625 / 2 = 0.78125) => log(25) ~ 4.64
+
+- Logarithmic Complexity
+  - Logarithmic time complexity is great!
+  - O(log n) logarithmic complexity compares favorably with O(n)
+
+- Importance of Logarithmic Time Complexity
+  - Certain searching algorithms have logarithmic time complexity.
+  - Efficient sorting algorithms involve logarithms.
+  - Recursion sometimes involves logarithmic **space** complexity.
+
+- Common Big O Notation (slowest to fastest)
+  - O(n^2)
+  - O(nlog n)
+  - O(n)
+  - O(log n)
+  - O(1)
 
 ![Big O](/images/big-o.png)
 
+- Recap
+  - To analyze the performance of an algorithm, we use Big O Notation
+  - Big O Notation can give us a high level understanding of the time or space complexity of an algorithm
+  - Big O Notation doesn't care about precision, only about general trends (linear? quadratic? constant?)
+  - The time or space complexity (as measured by Big O) depends only on the algorithm, not the hardware used to run the algorithm
+  - Big O Notation is everywhere, so get lots of practice!
+
 ## Section 3: Analyzing Performance of Arrays and Objects
 
-### Objectives
+- Objectives
+  - Understand how objects and arrays work through the lens of Big O
+  - Explain why adding elements to the beginning of an array is costly
+  - Compare and contrast the runtime for arrays and objects, as well as built-in methods
 
-- understand how objects and arrays work through the lens of Big O
-- explain why adding elements to the beginning of an array is costly
-- compare and contrast the runtime for arrays and objects, as well as built-in methods
+- Objects
+  - Unordered, key-value pairs
 
 ### [The Big O of Objects](https://cs.slides.com/colt_steele/built-in-data-structures-25#/)
 
