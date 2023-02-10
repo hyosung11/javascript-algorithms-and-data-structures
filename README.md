@@ -366,26 +366,25 @@ O(n)
 
 ## Section 3: Analyzing Performance of Arrays and Objects
 
+### 3.1 Objects
+
+[The Big O of Objects](https://cs.slides.com/colt_steele/built-in-data-structures-25#/)
+
 - Objectives
   - Understand how objects and arrays work through the lens of Big O
   - Explain why adding elements to the beginning of an array is costly
   - Compare and contrast the runtime for arrays and objects, as well as built-in methods
 
-- Objects
-  - Unordered, key-value pairs
+- Objects are unordered data structures where everything is stored in unordered, key-value pairs
 
-### [The Big O of Objects](https://cs.slides.com/colt_steele/built-in-data-structures-25#/)
-
-- Objects are unordered data structures where everything is stored in unordered, key value pairs
-
-- Use objects:
-  - when you don't need order
-  - when you need fast access/insertion and removal
+- When to use Objects (unordered, key-value pairs)
+  - When you don't need order
+  - When you need fast access/insertion and removal
 
 - Big O of Objects
   - Insertion O(1)
   - Removal O(1)
-  - Searching O(1)
+  - Searching O(n)
   - Access O(1)
 
 - Big O of Object Methods
@@ -394,47 +393,90 @@ O(n)
   - Object.entries O(n)
   - hasOwnProperty O(1)
 
-### The Big O of Arrays
+### Object Operations Quiz
+
+- Question 1: What is the Big O for adding a key and value into an object?
+  - O(1)
+
+- Question 2: What is the big O for accessing a key in an object?
+  - O(1)
+
+- Question 3: What is the big O of removing a key in an object
+  - O(1)
+
+### 3.2 Arrays
 
 - Use arrays:
-  - when you need order
-  - when you need fast access/insertion and removal (sort of ...)
+  - When you need order
+  - When you need fast access/insertion and removal (sort of ...)
   - not as efficient when you have to reindex the array
 
 - Big O of Arrays
-  - Insertion - it depends ... push()/pop() vs shift()/unshift()
-  - Removal - it depends ...
-  - Searching - O(n)
-  - Access - O(1)
+  - Insertion: it depends ...
+    - push()/pop() => O(1)
+    - shift()/unshift() => O(n)
+  - Removal: it depends ...
+  - Searching O(n)
+  - Access O(1)
 
 - Big O of Array Methods
-  - push - O(1)
-  - pop - O(1)
-  - shift - O(n)
-  - unshift - O(n)
-  - concat - O(n)
-  - slice - O(n)
-  - splice - O(n)
-  - sort - O(n * log n)
-  - forEach/map/filter/reduce/etc. - O(n)
+  - push O(1)
+  - pop O(1)
+  - shift O(n)
+  - unshift O(n)
+  - concat O(n)
+  - slice O(n)
+  - splice O(n)
+  - sort O(n * log n)
+  - forEach/map/filter/reduce/etc. O(n)
 
-## Section 4: [Problem Solving Approach](https://cs.slides.com/colt_steele/problem-solving-patterns#/)
+- Array Limitation
+  - Inserting at the beginning of an array is not as easy as we might think. There are more efficient data structures for that.
+
+### Array Operations Quiz
+
+1. What is the big O for pushing into an array?
+    - O(1)
+
+2. What is the big O for shifting into an array?
+    - O(n)
+
+3. What is the big O for the forEach function
+    - O(n)
+
+## Section 4: Problem Solving Approach
+
+[Problem Solving Approach](https://cs.slides.com/colt_steele/problem-solving-patterns#/)
 
 ### Introduction to Problem Solving
 
-- an algorithm is a process or set of steps to accomplish a certain task.
+- Objectives
+  - Define what an algorithm is
+  - Devise a plan to solve algorithms
+  - Compare and contrast problem solving patterns including frequency counters, two pointer problems, and divide and conquer
+
+- What is an algorithm?
+  - An algorithm is a process or set of steps to accomplish a certain task.
+  - Almost everything that you do in programming involves some kind of algorithm
+  - It's the foundation for being a successful problem solving developer
+  - Interviews
+
 - How do you improve?
-  1. Devise a plan for solving problems.
-  2. Master common problem solving patterns.
+  1. *Devise* a plan for solving problems.
+  2. *Master* common problem solving patterns.
 
-- Problem Solving
-  - understand the problem
-  - explore concrete examples
-  - break it down
-  - solve/simplify
-  - look back and refactor
+- Problem Solving Strategies
+  - Understand the problem
+  - Explore concrete examples
+  - Break it down
+  - Solve/simplify
+  - Look back and refactor
 
-### Step 1: [Understand the Problem](https://en.wikipedia.org/wiki/How_to_Solve_It)
+- Note: many of these strategies are adapted from George Polya, whose book *How To Solve It* is a great resource for anyone who wants to become a better problem solver
+
+### Step 1: Understand the Problem - RRRR
+
+[Understand the Problem](https://en.wikipedia.org/wiki/How_to_Solve_It)
 
 1. Can I restate the problem in my own words?
 2. What are the inputs that go into the problem?
