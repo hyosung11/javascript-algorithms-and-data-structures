@@ -546,20 +546,59 @@ charCount("Your PIN number is 1234!")
   - Write a simplified solution
   - Then incorporate that difficulty back in
 
-### Step 5: Look Back and Refactor - RRRR
+### Step 5: Look Back and Refactor
 
 - Congrats on solving it, but you're not done!
-- consider efficiency and legibility
+- Consider efficiency and legibility
 
-### Refactoring Questions
+- Refactoring Questions
+  - Can you check the result?
+  - Can you derive the result differently?
+  - Can you understand it at a glance?
+  - Can you use the result or method for some other problem?
+  - Can you improve the **performance** of your solution?
+  - Can you think of other ways to refactor?
+  - How have other people solved this problem?
 
-- Can you check the result?
-- Can you derive the result differently?
-- Can you understand it at a glance?
-- Can you use the result or method for some other problem?
-- Can you improve the performance of your solution?
-- Can you think of other ways to refactor?
-- How have other people solved this problem?
+- Refactored Solution
+
+```js
+function charCount(str) {
+  let obj = {};
+  for (let char of str) {
+    if (isAlphanumeric(char)) {
+      char = char.toLowerCase();
+      obj[char] = obj[char] + 1 || 1;
+    }
+  }
+
+  return obj;
+}
+
+function isAlphanumeric(char) {
+  let code = char.charCodeAt(0);
+  if (!(code > 47 && code < 58) && // numeric 0-9
+      !(code > 64 && code < 91) && // upper alpha A-Z
+      !(code > 96 && code < 123)) {// lower alpha a-z
+    return false;
+  }
+
+  return true;
+}
+
+console.log(charCount('Barcelona')); // { b: 1, a: 2, r: 1, c: 1, e: 1, l: 1, o: 1, n: 1 }
+```
+
+- Recap
+  - Understand the problem
+  - Explore concrete examples
+  - Break it down
+  - Solve/simplify
+  - Look back and refactor
+
+- How do you improve?
+  - Devise a plan for solving problems
+  - Master common problem solving patterns
 
 ## Section 5: Problem Solving Patterns
 
